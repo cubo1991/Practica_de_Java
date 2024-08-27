@@ -128,8 +128,45 @@ public class Main {
                 break;
 
         }
-//Ejecicio 13
+//Ejercicio 13
+        int l;
+        int contador = 0;
 
+        String dato = JOptionPane.showInputDialog("Introduce un número");
+        l = Integer.parseInt(dato);
+
+        if (l <= 1) {
+            System.out.println("No es primo");
+        } else {
+            for (int i = 1; i <= l; i++) {
+                if (l % i == 0) {
+                    contador++;
+                }
+            }
+            if (contador == 2) {
+                System.out.println(l + " es primo");
+            } else {
+                System.out.println(l + " no es primo");
+            }
+        }
+
+// Ejercicio 14
+        int x = new Double(Math.random() * 100).intValue();
+        int intento = 0;
+        int z;
+        boolean inicio = false;
+ do{
+     String datoIngresado = JOptionPane.showInputDialog("Introduce un número");
+     z = Integer.parseInt(datoIngresado);
+     inicio = true;
+     if(z<x) {
+         intento++;
+         System.out.println("Respuesta: Es muy bajo ");} else if (z>x) {
+         intento++;
+         System.out.println("Respuesta: Es muy alto ");
+     }else {System.out.println("Respuesta: Correcto, numero encontrado, cantidad de intentos "+ intento);}
+
+ } while(z != x);
 
     }
 }
